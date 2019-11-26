@@ -1,6 +1,6 @@
 {
   "name": "getpdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny npm command that creates a PDF file and a PNG image of a full web page.",
   "main": "index.js",
   "bin": {
