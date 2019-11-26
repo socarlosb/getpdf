@@ -6,8 +6,9 @@ const checkArguments = () => {
 
 const cleanUpUrl = url => {
   const cleanUrl = url.toLowerCase();
-  if (!cleanUrl.includes("https://") || !cleanUrl.includes("http://"))
+  if (!cleanUrl.includes("https://") && !cleanUrl.includes("http://")) {
     return `http://${cleanUrl}`;
+  }
   return cleanUrl;
 };
 
@@ -25,7 +26,6 @@ exports.start = url => {
 
 const toPdf = async rawUrl => {
   const url = cleanUpUrl(rawUrl);
-  console.info("url", url);
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try {
@@ -33,8 +33,11 @@ const toPdf = async rawUrl => {
     await page.screenshot({ path: `website.png`, fullPage: true });
     await page.pdf({ path: `website.pdf`, format: "A4" });
     await browser.close();
-    return console.info(`Files created: website.pdf, website.png`);
+    console.info(`Files created: website.pdf, website.png`);
   } catch (error) {
-    return console.error("There was an error", error);
+    await browser.close();
+    console.error(
+      "There was some kind of error, please let us know so we can put our monkeys to work!"
+    );
   }
 };

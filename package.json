@@ -25,10 +25,6 @@
     "url": "git+https://github.com/socarlosb/getpdf.git"
   },
   "homepage": "https://github.com/socarlosb/getpdf#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/socarlosb/getpdf.git"
-  },
   "bugs": {
     "url": "https://github.com/socarlosb/getpdf/issues"
   }
