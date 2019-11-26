@@ -1,0 +1,35 @@
+{
+  "name": "getpdf",
+  "version": "1.0.0",
+  "description": "A tiny npm command that creates a PDF file and a PNG image of a full web page.",
+  "main": "index.js",
+  "bin": {
+    "getpdf": "./bin/getpdf.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "puppeteer",
+    "pdf",
+    "png"
+  ],
+  "author": "Carlos Barbosa <socarlosb@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socarlosb/getpdf.git"
+  },
+  "homepage": "https://github.com/socarlosb/getpdf#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socarlosb/getpdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/socarlosb/getpdf/issues"
+  }
+}
